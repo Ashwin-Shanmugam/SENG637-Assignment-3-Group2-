@@ -26,6 +26,8 @@ This assignment focuses on white-box testing and evaluating the adequacy of our 
 Our testing strategy was led by the analyzing the control flow metrics obtained from our baseline Assignment 2 test suite.
 
 1. We first ran our existing test suite using the EclEmma coverage tool in Eclipse.
+- For statement coverage we used the default Instruction Coverage. Since instruction coverage measures the execution of the Java bytecode, it serves as a direct proxy for testing if source code statements (lines) are executed.
+- EclEmma does not support condition coverage, so as per instructions we substituted it with method coverage.
 
 2. Since EclEmma does not natively report condition coverage, we substituted it with method coverage, as permitted by lab instructions.
 
@@ -33,7 +35,7 @@ Our testing strategy was led by the analyzing the control flow metrics obtained 
 
 4. While we inspected the source code to find any paths not covered, we based our test oracles from the Javadoc requirements.
 
-5. We also discovered paths that were impossible to reach. Such as the methods getLowerBound(), getUpperBound(), getLength() check if (lower > upper) and throw an exception. Yet the Range constructor already checks this condition and prevents instantiation if lower > upper. This is an example of an infesible path, which justifies why 100% statement coverage cannot be achieved for these methods.
+5. We also discovered paths that were impossible to reach. Such as the Range methods getLowerBound(), getUpperBound(), getLength() check if (lower > upper) and throw an exception. Yet the Range constructor already checks this condition and prevents instantiation if lower > upper. This is an example of an infesible path, which justifies why 100% statement coverage cannot be achieved for these methods.
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
 
@@ -47,7 +49,15 @@ Branch Coverage: 84.1%
 Method Coverage: 100%
 # 6 Pros and Cons of coverage tools used and Metrics you report
 
-Text…
+Tool Used: EclEmma
+
+Pros:
+- Ease of installation, and works seamlessly with Eclipse. We could simply run it by using "Coverage As -> JUnit Test".
+- The red/green highliting made identifying missed branches easy and simple.
+
+Cons:
+- The default view only shows instruction coverage. We had to configure the Active Counters to observe method and branch metrics.
+- It does not support condition coverage which required us to substitute it with method coverage.
 
 # 7 A comparison on the advantages and disadvantages of requirements-based test generation and coverage-based test generation.
 
