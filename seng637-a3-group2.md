@@ -126,6 +126,15 @@ Impact: Exercises the early return false block for invalid type comparisons.
 Instruction Coverage: 85.9%
 Branch Coverage: 84.1%
 Method Coverage: 100%
+
+## Range Instruction Coverage
+![Instruction Coverage](./Range_InstructionCoverageFinal.png)
+
+## Range Branch Coverage
+![Instruction Coverage](./Range_BranchCoverageFinal.png)
+
+## Range Method Coverage
+![Instruction Coverage](./Range_MethodCoverageFinal.png)
 # 6 Pros and Cons of coverage tools used and Metrics you report
 
 Tool Used: EclEmma
