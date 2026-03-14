@@ -96,6 +96,23 @@ Our testing strategy was led by the analyzing the control flow metrics obtained 
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
 
+## DataUtilitiesTest
+
+1. cloneNullSourceThrowsIllegalArgumentException()
+This test checks that the clone(double[][]) method properly rejects a null input by throwing an IllegalArgumentException. Its coverage impact is important because it exercises the defensive error handling path instead of the normal cloning path. Without this test, only valid input behavior would be covered, so the exception branch would remain untested.
+
+2. columnTotalSkipsNulls()
+This test verifies that calculateColumnTotal(Values2D, int) ignores null values instead of trying to add them. It improves coverage by forcing the condition that checks whether a value is null to evaluate false for at least one iteration. Most normal test cases only cover non null values, so this case adds branch and condition coverage while also confirming that null entries do not affect the total.
+
+3. columnTotalWithValidRowsSkipsOutOfBounds()
+This test uses a filtered row array that contains one valid row index and one invalid row index. It checks that the method includes the valid row in the total and skips the out of bounds row safely. This increases branch coverage because it exercises both outcomes of the row bounds check, which would not happen if all indices were valid.
+
+4. rowTotalWithValidColsSkipsOutOfBounds()
+This test does the same kind of check for calculateRowTotal(Values2D, int, int[]), but on columns instead of rows. It confirms that valid columns are counted and invalid columns are ignored. Its main coverage contribution is that it executes both sides of the column bounds decision, which strengthens branch and condition coverage for the filtered row total method.
+
+5. cumulativePercentagesHandlesNullsAsZero()
+This test verifies that getCumulativePercentages(KeyedValues) handles a null value correctly by treating it as contributing nothing to the running total. It improves coverage by exercising the null handling condition inside the cumulative calculation logic. It also strengthens the quality of the test suite because it checks both control flow and correctness of the resulting percentages.
+
 ## RangeTest
 
 1. testContains_ValueBelowLowerBound()
@@ -122,7 +139,21 @@ Impact: Exercises the early return false block for invalid type comparisons.
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
 
-1. Range Class Coverage Achieved:
+1. Data Utilities Class Coverage Achieved:
+Instruction Coverage: 88.6%
+Branch Coverage: 79.7%
+Method Coverage: 90.0%
+
+## DataUtilities Instruction Coverage
+![Instruction Coverage](./DataUtilities_InstructionCoverageFinal.png)
+
+## DataUtilities Branch Coverage
+![Instruction Coverage](./DataUtilities_BranchCoverageFinal.png)
+
+## DataUtilities Method Coverage
+![Instruction Coverage](./DataUtilities_MethodCoverageFinal.png)
+
+2. Range Class Coverage Achieved:
 Instruction Coverage: 85.9%
 Branch Coverage: 84.1%
 Method Coverage: 100%
