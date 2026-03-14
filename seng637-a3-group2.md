@@ -39,7 +39,29 @@ Our testing strategy was led by the analyzing the control flow metrics obtained 
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
 
-Text…
+## RangeTest
+
+1. testContains_ValueBelowLowerBound()
+Description: Verifies that passing a value strictly below the range's lower boundary returns false.
+Design: Targeted the boundary check false condition within the contains(double) method.
+Impact: Increased branch and statement coverage for the lower-bound failure path.
+2. testCombine_BothNull()
+Description: Verifies that combining two null ranges returns null.
+Design: Executes the previously unvisited sequential null-check decisions at method start.
+Impact: Coverage increase for the initial conditional branches in the combine method.
+3. testExpandToInclude_NullRange()
+Description: Verifies expanding a null range creates a new range using the provided value.
+Design: Targets the expandToInclude method which was completely missed by baseline tests.
+Impact: Satisfies the null-guard check and early return logic.
+4. testExpandToInclude_ValueAlreadyInside()
+Description: Verifies that internal values return the original range unaltered.
+Design: Targets the final default return statement when no expansion is needed.
+Impact: Reaches the default state by bypassing both upper and lower expansion branches.
+5. testEquals_DifferentClass()
+Description: Verifies that comparing Range to a non-Range object correctly returns false.
+Design: Targets the type-checking safety guard instanceof in the equals method.
+Impact: Exercises the early return false block for invalid type comparisons.
+
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
 
