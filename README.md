@@ -77,19 +77,19 @@ Five key test cases and their coverage impact:
 
 2. columnTotalSkipsNulls():
    
-  This test verifies that calculateColumnTotal(Values2D, int) ignores null values instead of trying to add them. It improves coverage by forcing the condition that checks whether a value is null to evaluate false for at least one iteration. Most normal test cases only cover non null values, so this case adds branch and condition coverage while also confirming that null entries do not affect the total.
+    This test verifies that calculateColumnTotal(Values2D, int) ignores null values instead of trying to add them. It improves coverage by forcing the condition that checks whether a value is null to evaluate false for at least one iteration. Most normal test cases only cover non null values, so this case adds branch and condition coverage while also confirming that null entries do not affect the total.
 
 3. columnTotalWithValidRowsSkipsOutOfBounds():
    
-  This test uses a filtered row array that contains one valid row index and one invalid row index. It checks that the method includes the valid row in the total and skips the out of bounds row safely. This increases branch coverage because it exercises both outcomes of the row bounds check, which would not happen if all indices were valid.
+    This test uses a filtered row array that contains one valid row index and one invalid row index. It checks that the method includes the valid row in the total and skips the out of bounds row safely. This increases branch coverage because it exercises both outcomes of the row bounds check, which would not happen if all indices were valid.
 
 4. rowTotalWithValidColsSkipsOutOfBounds():
    
-  This test does the same kind of check for calculateRowTotal(Values2D, int, int[]), but on columns instead of rows. It confirms that valid columns are counted and invalid columns are ignored. Its main coverage contribution is that it executes both sides of the column bounds decision, which strengthens branch and condition coverage for the filtered row total method.
+    This test does the same kind of check for calculateRowTotal(Values2D, int, int[]), but on columns instead of rows. It confirms that valid columns are counted and invalid columns are ignored. Its main coverage contribution is that it executes both sides of the column bounds decision, which strengthens branch and condition coverage for the filtered row total method.
 
 5. cumulativePercentagesHandlesNullsAsZero():
    
-  This test verifies that getCumulativePercentages(KeyedValues) handles a null value correctly by treating it as contributing nothing to the running total. It improves coverage by exercising the null handling condition inside the cumulative calculation logic. It also strengthens the quality of the test suite because it checks both control flow and correctness of the resulting percentages.
+    This test verifies that getCumulativePercentages(KeyedValues) handles a null value correctly by treating it as contributing nothing to the running total. It improves coverage by exercising the null handling condition inside the cumulative calculation logic. It also strengthens the quality of the test suite because it checks both control flow and correctness of the resulting percentages.
 
 ## Part D: Coverage Tool Evaluation and Reflection
 - TODO: pros/cons of tools used, integration notes.
