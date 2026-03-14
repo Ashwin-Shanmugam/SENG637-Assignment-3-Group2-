@@ -132,4 +132,4 @@ Another challenge was understanding why certain methods capped out around 30-60%
 
 # 10 Comments/feedback on the lab itself
 
-
+This lab provided a practical introduction to evaluating test suite adequacy using code coverage techniques. It helped reinforce concepts from unit testing by showing how coverage metrics such as instruction or branch coverage can be used to identify untested parts of the code. The use of tools like EclEmma allowed us to visualize which parts of the source code were exercised by our tests, making it easier to design additional test cases. One challenge encountered during the lab was understanding the differences between the coverage metrics reported by the tool and those suggested in the assignment instructions. Overall, the lab was valuable in demonstrating the relationship between test design and coverage measurement, and it highlighted the limitations of relying solely on coverage metrics to assess test quality.
