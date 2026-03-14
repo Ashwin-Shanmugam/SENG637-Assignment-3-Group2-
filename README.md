@@ -64,9 +64,10 @@
 | constrainWithInfiniteBoundsPassesThrough | Yes | No | No | value | unbounded range |
 
 ## Part C: Test Suite Development
-  New tests, strategy, and mapping to adequacy goal:
+
+New tests, strategy, and mapping to adequacy goal:
   
-    The new tests were added using a coverage driven strategy. After writing the original functional tests, we reviewed DataUtilities method by method and added cases for missed paths such as null inputs, empty inputs, null cell values,     duplicate valid indices, out of bounds filtered indices, and deep copy behavior. The goal was not only to check correct outputs, but also to exercise exceptional cases and edge cases that affect control flow. This improved statement coverage by executing more method bodies and exception paths, improved branch coverage by forcing both true and false outcomes of key decisions such as null checks and bounds checks, and improved condition coverage by making predicates like n != null, row < rowCount, col < colCount, and array null and equality checks evaluate both ways. Some remaining uncovered branches appear infeasible due to seeded faults in the provided code, so they should be reported as unreachable rather than untreated.
+  The new tests were added using a coverage driven strategy. After writing the original functional tests, we reviewed DataUtilities method by method and added cases for missed paths such as null inputs, empty inputs, null cell values,     duplicate valid indices, out of bounds filtered indices, and deep copy behavior. The goal was not only to check correct outputs, but also to exercise exceptional cases and edge cases that affect control flow. This improved statement coverage by executing more method bodies and exception paths, improved branch coverage by forcing both true and false outcomes of key decisions such as null checks and bounds checks, and improved condition coverage by making predicates like n != null, row < rowCount, col < colCount, and array null and equality checks evaluate both ways. Some remaining uncovered branches appear infeasible due to seeded faults in the provided code, so they should be reported as unreachable rather than untreated.
   
 Five key test cases and their coverage impact:
 
