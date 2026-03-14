@@ -29,7 +29,7 @@ This assignment focuses on white-box testing and evaluating the adequacy of our 
 ![calculateColumnTotal flowchart](./calculateColumnTotal.png)
 
 ### **Range.constrain(double value)**  
-![constrain flowchart](./contains.png)
+![constrain flowchart](./constrain.png)
 
 # Appendix B: Data Flow Tables (Part B)
 
