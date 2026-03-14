@@ -159,7 +159,7 @@ Cons:
 
 # 8 A discussion on how the team work/effort was divided and managed
 
-Text…
+The work for this assignment was divided among the team members to ensure efficient collaboration and balanced contributions. **Ashwin** was responsible for setting up the runnable project environment, executing the code coverage analysis using EclEmma, and collecting the coverage screenshots and tool documentation. **Salehin** completed the manual data-flow analysis, including constructing the two data-flow graphs, generating the definition–use (DU) tables, and preparing the coverage-per-test table. **Noshin** focused on implementing and documenting the test cases for the DataUtilities class, including commenting the test code and identifying five key test cases used to improve coverage. **Jasneet** developed the test cases for the Range class and compiled the final report, including consolidating contributions from all team members, polishing the document, and handling the final submission. This division of tasks allowed the team to work in parallel on different components of the assignment while coordinating progress through regular communication.
 
 # 9 Any difficulties encountered, challenges overcome, and lessons learned from performing the lab
 
