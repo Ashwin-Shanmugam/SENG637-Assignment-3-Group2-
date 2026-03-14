@@ -151,10 +151,10 @@ Cons:
 
 1. Requirements based testing
 - Advantages: It tests the SUT against specifications, validating it against functional specifications to confirm that the final product meets requirements. It encourages testers to prioritize end user behaviours and edge cases defined by the domain.
-- Disadvantages: It does not guarantee complete code coverage. Internal logic, hidden architecrutal errors or defensive programming can remain unexecuted if not triggered by public interfaces defined in the requirements.
+- Disadvantages: It does not guarantee complete code coverage. Internal logic, hidden architectural errors or defensive programming can remain unexecuted if not triggered by public interfaces defined in the requirements.
 
 2. Coverage based testing
-- Advantages: It ensures that the internal implementation is rigorously verified. It is effetive in identifying unreachable code, ensuring echaustive switch statement logic and confirming all control flow edges interact properly.
+- Advantages: It ensures that the internal implementation is rigorously verified. It is effective in identifying unreachable code, ensuring exhaustive switch statement logic and confirming all control flow edges interact properly.
 - Disadvantages: Pursuing 100% coverage is impractical because of the high density of infeasible execution paths. Also, high coverage metrics only show that the code is executable; it does not ensure that software logic is satisfactory according to the often broader business objectives. 
 
 # 8 A discussion on how the team work/effort was divided and managed
