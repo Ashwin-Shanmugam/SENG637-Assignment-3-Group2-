@@ -27,14 +27,24 @@ Our testing strategy was led by the analyzing the control flow metrics obtained 
 
 1. We first ran our existing test suite using the EclEmma coverage tool in Eclipse.
 
+2. Since EclEmma does not natively report condition coverage, we substituted it with method coverage, as permitted by lab instructions.
+
+3. We analyzed the visual red/green highlights to identify unexecuted branches, instructions, and methods.
+
+4. While we inspected the source code to find any paths not covered, we based our test oracles from the Javadoc requirements.
+
+5. We also discovered paths that were impossible to reach. Such as the methods getLowerBound(), getUpperBound(), getLength() check if (lower > upper) and throw an exception. Yet the Range constructor already checks this condition and prevents instantiation if lower > upper. This is an example of an infesible path, which justifies why 100% statement coverage cannot be achieved for these methods.
+
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
 
 Text…
 
 # 5 A detailed report of the coverage achieved of each class and method (a screen shot from the code cover results in green and red color would suffice)
 
-Text…
-
+1. Range Class Coverage Achieved:
+Instruction Coverage: 85.9%
+Branch Coverage: 84.1%
+Method Coverage: 100%
 # 6 Pros and Cons of coverage tools used and Metrics you report
 
 Text…
@@ -49,7 +59,7 @@ Text…
 
 # 9 Any difficulties encountered, challenges overcome, and lessons learned from performing the lab
 
-Text…
+A major difficulty we encountered was in handling EclEmma's limitation with condition coverage. Since the tool did not show it, we had to check the assignment rules and pivot to using Method coverage as an alternative
 
 # 10 Comments/feedback on the lab itself
 
