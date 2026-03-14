@@ -69,8 +69,10 @@ Text…
 
 # 9 Any difficulties encountered, challenges overcome, and lessons learned from performing the lab
 
-A major difficulty we encountered was in handling EclEmma's limitation with condition coverage. Since the tool did not show it, we had to check the assignment rules and pivot to using Method coverage as an alternative
+A major difficulty we encountered was in handling EclEmma's limitation with condition coverage. Since the tool did not show it, we had to check the assignment rules and pivot to using Method coverage as an alternative.
+
+Another challenge was understanding why certain methods capped out around 30-60% coverage. Through team analysis we identified cases of infeasible paths. We got to learn that certain programming inside a method could be unreacheable if the constructor already checks the condition. This was a great moment to learn that 100% coverage is often unrealistic.
 
 # 10 Comments/feedback on the lab itself
 
-Text…
+
